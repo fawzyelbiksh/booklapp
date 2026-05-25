@@ -13,7 +13,8 @@ class SplashViewBody extends StatelessWidget {
       children: [
       Image.asset(AssetsData.logo),
        const SizedBox(height: 20,),
-       
+       Text("Read free books",style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+      
       ],
     );
   }
