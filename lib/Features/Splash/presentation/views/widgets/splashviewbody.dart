@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
+import 'package:go_router/go_router.dart';
 
 import 'SlidingText.dart';
 class SplashViewBody extends StatefulWidget {
@@ -66,7 +67,8 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   }
    void navigateToHome() {
      Future.delayed( const Duration(seconds: 3), () {
-        Get.to (() => const HomeView(),transition: Transition.fade , duration: TransitionDuration);
+       
+       GoRouter.of(context).pushReplacement('/homeView');
     
       });
   }
