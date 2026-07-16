@@ -1,6 +1,8 @@
 import 'package:booklapp/Core/utils/styles.dart';
+import 'package:booklapp/Features/Home/presentation/views/widgets/BookRating.dart';
 import 'package:booklapp/constant.dart';
 import 'package:flutter/material.dart' ;
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 class BestSellerListViewItem extends StatelessWidget {
@@ -26,47 +28,43 @@ class BestSellerListViewItem extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 30),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
-                child: Text(
-                  "Harry Potter\nand the Goblet of Fire ",
-                  style: Style.textStyle20.copyWith(fontFamily: kGtSectraFine, ),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              const SizedBox(height: 3),
-              Text(
-                "J.K Rowling",
-                style: Style.textStyle14.copyWith(
-                  color: Colors.white.withOpacity(0.7),
-                ),
-              ),
-              const SizedBox(height: 3),
-              Row(
-                children: [
-                  Text(
-                    "19.99\$",
-                    style: Style.textStyle20.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: Text(
+                    "Harry Potter\nand the Goblet of Fire ",
+                    style: Style.textStyle20.copyWith(fontFamily: kGtSectraFine, ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(width: 60),
-                  Icon(Icons.star, size: 16, color: Colors.yellowAccent),
-                  const SizedBox(width: 5),
-                  Text(
-                    "4.8",
-                    style: Style.textStyle18.copyWith(
-                      color: Colors.white.withOpacity(0.7),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  "J.K Rowling",
+                  style: Style.textStyle14.copyWith(
+                    color: Colors.white.withOpacity(0.7),
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Row(
+                  children: [
+                    Text(
+                      "19.99\$",
+                      style: Style.textStyle20.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                    const Spacer(),
+                  BookRating (),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
     );
   }
 }
+
