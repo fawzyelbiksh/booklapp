@@ -1,4 +1,5 @@
 import 'package:booklapp/Core/utils/styles.dart';
+import 'package:booklapp/Features/Home/presentation/views/widgets/bestsellerlistview.dart';
 import 'package:flutter/material.dart';
 import 'BestSellerListViewItem.dart';
 import 'CustomAppBar.dart';
@@ -9,19 +10,32 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          CustomAppBar(),
-          FeaturedBooksListView(),
-          SizedBox(height: 50),
-          Text("Best Seller", style: Style.textStyle30),
-          BestSellerListViewItem(),
-        ],
-      ),
+    return  CustomScrollView(
+      
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const  [
+              CustomAppBar(),
+              FeaturedBooksListView(),
+              SizedBox(height: 50),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text("Best Seller", style: Style.textStyle30),
+              ),
+            ],
+          ),
+        ),
+        SliverFillRemaining(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            child: BestSellerListView(),
+          ),
+        ),
+      ],
     );
+
   }
 }
 
