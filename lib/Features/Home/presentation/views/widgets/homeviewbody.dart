@@ -1,7 +1,6 @@
 import 'package:booklapp/Core/utils/styles.dart';
 import 'package:booklapp/Features/Home/presentation/views/widgets/bestsellerlistview.dart';
 import 'package:flutter/material.dart';
-import 'BestSellerListViewItem.dart';
 import 'CustomAppBar.dart';
 import 'featured_book_list_view.dart';
 

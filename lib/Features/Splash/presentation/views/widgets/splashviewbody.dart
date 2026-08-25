@@ -1,11 +1,8 @@
 
 import 'package:booklapp/Core/utils/assets.dart';
-import 'package:booklapp/Features/Home/presentation/views/homeview.dart';
-import 'package:booklapp/constant.dart';
+
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
+
 import 'package:go_router/go_router.dart';
 
 import 'SlidingText.dart';
