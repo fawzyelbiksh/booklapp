@@ -1,4 +1,6 @@
 import 'package:booklapp/Core/utils/styles.dart';
+import 'package:booklapp/Features/Home/presentation/views/widgets/BookRating.dart';
+import 'package:booklapp/Features/Home/presentation/views/widgets/BooksAction.dart';
 import 'package:booklapp/Features/Home/presentation/views/widgets/Custom_Book_Details_AppBar.dart';
 import 'package:booklapp/Features/Home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
@@ -18,12 +20,12 @@ class BookDetailsViewBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: width * .2),
             child: CustomBookImage(),
           ),
-          const SizedBox(height:35),
+          const SizedBox(height: 35),
           Text(
             'The Jungle Book',
             style: Style.textStyle30.copyWith(fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height:5),
+          const SizedBox(height: 5),
           Opacity(
             opacity: 0.7,
             child: Text(
@@ -34,8 +36,13 @@ class BookDetailsViewBody extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: 18),
+          const BookRating(mainAxisAlignment: MainAxisAlignment.center),
+          const SizedBox(height: 37),
+          const BooksAction(),
         ],
       ),
     );
   }
 }
+
