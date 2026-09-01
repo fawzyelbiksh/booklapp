@@ -1,8 +1,5 @@
-
-
 import 'package:booklapp/Features/Home/presentation/views/widgets/BooksDetailsAction.dart';
 import 'package:booklapp/Features/Home/presentation/views/widgets/Custom_Book_Details_AppBar.dart';
-
 import 'package:booklapp/Features/Home/presentation/views/widgets/similarBooksAction.dart';
 import 'package:flutter/material.dart';
 
