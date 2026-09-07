@@ -1,3 +1,5 @@
+import 'package:booklapp/Core/widgets/Custom_error_widget.dart';
+import 'package:booklapp/Core/widgets/Custom_loading_indicator.dart';
 import 'package:booklapp/Features/Home/presentation/manager/Featured_books_cubit/featured_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,9 +27,9 @@ class FeaturedBooksListView extends StatelessWidget {
             ),
           );
         } else if (state is FeaturedBooksFailure) {
-          return Center(child: Text(state.errMessage));
+          return CustomErrorWidget(errorMessage: state.errMessage);
         } else {
-          return const Center(child: CircularProgressIndicator());
+          return const CustomLoadingIndicator();
         }
       },
     );
