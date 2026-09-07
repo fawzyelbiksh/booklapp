@@ -6,18 +6,20 @@ class SimilarBooksItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   return SizedBox(
+    return SizedBox(
       height: MediaQuery.of(context).size.height * 0.15,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context,index) {
-          return const  Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 8.0),
-            child: CustomBookImage(),
+        itemBuilder: (context, index) {
+          return const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: CustomBookImage(
+              imgUrl:
+                  'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600',
+            ),
           );
         },
         itemCount: 10,
-      
       ),
     );
   }
